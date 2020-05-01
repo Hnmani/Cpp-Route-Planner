@@ -52,12 +52,18 @@ int main(int argc, const char **argv)
             osm_data = std::move(*data);
     }
     
-    // TODO 1: Declare floats `start_x`, `start_y`, `end_x`, and `end_y` and get
-    // user input for these values using std::cin. Pass the user input to the
-    // RoutePlanner object below in place of 10, 10, 90, 90.
-    float start_x, start_y, end_x, end_y;
 
-    std::cin >> start_x >> start_y >> end_x >> end_y;
+    float start_x, start_y, end_x, end_y;
+    std::cout<<"\nEnter the start_x coordinates in range 1-100 \n";
+    std::cin >> start_x;
+    std::cout<<"\nEnter the start_y coordinates in range 1-100 \n"; 
+    std::cin >> start_y;
+    std::cout<<"\nEnter the stop_x coordinates in range 1-100 \n";
+    std::cin >> end_x; 
+    std::cout<<"\nEnter the stop_y coordinates in range 1-100 \n";
+    std::cin >> end_y;
+    
+    
     // Build Model.
     RouteModel model{osm_data};
 
@@ -70,7 +76,7 @@ int main(int argc, const char **argv)
     // Render results of search.
     Render render{model};
 
-    auto display = io2d::output_surface{400, 400, io2d::format::argb32, io2d::scaling::none, io2d::refresh_style::fixed, 30};
+    auto display = io2d::output_surface{900, 900, io2d::format::argb32, io2d::scaling::none, io2d::refresh_style::fixed, 30};
     display.size_change_callback([](io2d::output_surface& surface){
         surface.dimensions(surface.display_dimensions());
     });
