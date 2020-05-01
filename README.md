@@ -1,6 +1,7 @@
 # Route Planning Project
 
-This repo contains the starter code for the Route Planning project.
+This repo contains a cpp project which uses A* algorithm to find the routes between two loactions given by user.
+The route is then represented onto a map.
 
 <img src="map.png" width="600" height="450" />
 
