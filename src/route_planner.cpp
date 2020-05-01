@@ -82,6 +82,6 @@ void RoutePlanner::AStarSearch() {
         
     }
     m_Model.path = ConstructFinalPath(current_node);
-    // TODO: Implement your solution here.
+  
 
 }
