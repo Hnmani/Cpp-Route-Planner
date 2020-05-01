@@ -1,7 +1,6 @@
 # Route Planning Project
-This is a C++ project which uses A* algorithm to find routes between locations on map.
-The user gives the input coordinates.
-
+This repo contains a cpp project which uses A* algorithm to find the routes between two loactions given by user.
+The route is then represented onto a map.
 
 <img src="map.png" width="600" height="450" />
 
